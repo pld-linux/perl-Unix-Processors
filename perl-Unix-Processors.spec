@@ -1,18 +1,19 @@
 #
 # Conditional build:
-# _without_tests - do not perform "make test"
+%bcond_without	# do not perform "make test"
+# 
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	Unix
 %define	pnam	Processors
 Summary:	Unix::Processors - Interface to processor (CPU) information
 Summary(pl):	Unix::Processors - Interfejs do informacji o procesorze (CPU)
 Name:		perl-Unix-Processors
-Version:	2.014
+Version:	2.015
 Release:	1
 License:	GPL/Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	a67af7e42a1b7f31f9c041f9a89bf159
+# Source0-md5:	4dda1e362b105c9528743ff7ee901992
 BuildRequires:	perl-devel >= 5.6
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -36,7 +37,7 @@ operacyjnego.
 	INSTALLDIRS=vendor
 %{__make} OPTIMIZE="%{rpmcflags}"
 
-%{!?_without_tests:%{__make} test}
+%{?with_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
