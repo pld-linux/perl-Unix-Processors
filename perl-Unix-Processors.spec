@@ -5,8 +5,8 @@
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	Unix
 %define	pnam	Processors
-Summary:	Unix::Processors - Interface to processor (CPU) information
-Summary(pl):	Unix::Processors - Interfejs do informacji o procesorze (CPU)
+Summary:	Unix::Processors - interface to processor (CPU) information
+Summary(pl):	Unix::Processors - interfejs do informacji o procesorze (CPU)
 Name:		perl-Unix-Processors
 Version:	2.021
 Release:	1
