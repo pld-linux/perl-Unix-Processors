@@ -3,8 +3,8 @@
 %bcond_without	# do not perform "make test"
 # 
 %include	/usr/lib/rpm/macros.perl
-%define	pdir	Unix
-%define	pnam	Processors
+%define		pdir	Unix
+%define		pnam	Processors
 Summary:	Unix::Processors - interface to processor (CPU) information
 Summary(pl):	Unix::Processors - interfejs do informacji o procesorze (CPU)
 Name:		perl-Unix-Processors
