@@ -8,7 +8,7 @@ Summary:	Unix::Processors - Interface to processor (CPU) information
 Summary(pl):	Unix::Processors - Interfejs do informacji o procesorze (CPU)
 Name:		perl-Unix-Processors
 Version:	1.9
-Release:	1
+Release:	2
 License:	GPL/Artistic
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
@@ -18,18 +18,21 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 This package provides accessors to per-processor (CPU) information.
-The object is obtained with the Unix::Processors::processors call.
-the operating system in a OS independent manner.
+The object is obtained with the Unix::Processors::processors call in
+a OS independent manner.
 
-# %description -l pl
-# TODO
+%description -l pl
+Ten pakiet udostêpnia funkcje dostêpowe do informacji o procesorach
+(CPU). Ten obiekt jest dostêpny poprzez wywo³anie
+Unix::Processors::processors w sposób niezale¿ny od systemu
+operacyjnego.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
 perl Makefile.PL
-%{__make}
+%{__make} OPTIMIZE="%{rpmcflags}"
 
 %{!?_without_tests:%{__make} test}
 
