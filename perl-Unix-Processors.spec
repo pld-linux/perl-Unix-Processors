@@ -1,0 +1,51 @@
+#
+# Conditional build:
+# _without_tests - do not perform "make test"
+%include	/usr/lib/rpm/macros.perl
+%define	pdir	Unix
+%define	pnam	Processors
+Summary:	Unix::Processors - Interface to processor (CPU) information
+Summary(pl):	Unix::Processors - Interfejs do informacji o procesorze (CPU)
+Name:		perl-Unix-Processors
+Version:	1.9
+Release:	1
+License:	GPL/Artistic
+Group:		Development/Languages/Perl
+Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
+BuildRequires:	perl >= 5.6
+BuildRequires:	rpm-perlprov >= 3.0.3-26
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+
+%description
+This package provides accessors to per-processor (CPU) information.
+The object is obtained with the Unix::Processors::processors call.
+the operating system in a OS independent manner.
+
+# %description -l pl
+# TODO
+
+%prep
+%setup -q -n %{pdir}-%{pnam}-%{version}
+
+%build
+perl Makefile.PL
+%{__make}
+
+%{!?_without_tests:%{__make} test}
+
+%install
+rm -rf $RPM_BUILD_ROOT
+
+%{__make} install DESTDIR=$RPM_BUILD_ROOT
+
+%clean
+rm -rf $RPM_BUILD_ROOT
+
+%files
+%defattr(644,root,root,755)
+%{perl_sitearch}/%{pdir}/*.pm
+%{perl_sitearch}/%{pdir}/%{pnam}
+%dir %{perl_sitearch}/auto/%{pdir}/%{pnam}
+%attr(755,root,root) %{perl_sitearch}/auto/%{pdir}/%{pnam}/*.so
+%{perl_sitearch}/auto/%{pdir}/%{pnam}/*.bs
+%{_mandir}/man3/*
