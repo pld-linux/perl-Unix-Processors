@@ -1,27 +1,27 @@
 #
 # Conditional build:
 %bcond_without	# do not perform "make test"
-# 
+#
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	Unix
 %define		pnam	Processors
 Summary:	Unix::Processors - interface to processor (CPU) information
 Summary(pl):	Unix::Processors - interfejs do informacji o procesorze (CPU)
 Name:		perl-Unix-Processors
-Version:	2.032
+Version:	2.033
 Release:	1
 License:	GPL or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	6fd6d9c952c853d9e70c48b664476f5b
+# Source0-md5:	19fc612ef9d206fe4ae758fa6eaba04c
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 This package provides accessors to per-processor (CPU) information.
-The object is obtained with the Unix::Processors::processors call in
-a OS independent manner.
+The object is obtained with the Unix::Processors::processors call in a
+OS independent manner.
 
 %description -l pl
 Ten pakiet udostêpnia funkcje dostêpowe do informacji o procesorach
