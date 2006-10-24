@@ -12,10 +12,11 @@ Version:	2.033
 Release:	1
 License:	GPL or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/Unix/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	19fc612ef9d206fe4ae758fa6eaba04c
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
+Requires:	perl-dirs >= 1.0-7
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -51,9 +52,9 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%{perl_vendorarch}/%{pdir}/*.pm
-%{perl_vendorarch}/%{pdir}/%{pnam}
-%dir %{perl_vendorarch}/auto/%{pdir}/%{pnam}
-%attr(755,root,root) %{perl_vendorarch}/auto/%{pdir}/%{pnam}/*.so
-%{perl_vendorarch}/auto/%{pdir}/%{pnam}/*.bs
+%{perl_vendorarch}/Unix/*.pm
+%{perl_vendorarch}/Unix/Processors
+%dir %{perl_vendorarch}/auto/Unix/Processors
+%attr(755,root,root) %{perl_vendorarch}/auto/Unix/Processors/*.so
+%{perl_vendorarch}/auto/Unix/Processors/*.bs
 %{_mandir}/man3/*
