@@ -6,7 +6,7 @@
 %define		pdir	Unix
 %define		pnam	Processors
 Summary:	Unix::Processors - interface to processor (CPU) information
-Summary(pl):	Unix::Processors - interfejs do informacji o procesorze (CPU)
+Summary(pl.UTF-8):   Unix::Processors - interfejs do informacji o procesorze (CPU)
 Name:		perl-Unix-Processors
 Version:	2.033
 Release:	1
@@ -24,10 +24,10 @@ This package provides accessors to per-processor (CPU) information.
 The object is obtained with the Unix::Processors::processors call in a
 OS independent manner.
 
-%description -l pl
-Ten pakiet udostêpnia funkcje dostêpowe do informacji o procesorach
-(CPU). Ten obiekt jest dostêpny poprzez wywo³anie
-Unix::Processors::processors w sposób niezale¿ny od systemu
+%description -l pl.UTF-8
+Ten pakiet udostÄ™pnia funkcje dostÄ™powe do informacji o procesorach
+(CPU). Ten obiekt jest dostÄ™pny poprzez wywoÅ‚anie
+Unix::Processors::processors w sposÃ³b niezaleÅ¼ny od systemu
 operacyjnego.
 
 %prep
