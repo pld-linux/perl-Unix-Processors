@@ -6,7 +6,7 @@
 %define		pdir	Unix
 %define		pnam	Processors
 Summary:	Unix::Processors - interface to processor (CPU) information
-Summary(pl.UTF-8):   Unix::Processors - interfejs do informacji o procesorze (CPU)
+Summary(pl.UTF-8):	Unix::Processors - interfejs do informacji o procesorze (CPU)
 Name:		perl-Unix-Processors
 Version:	2.033
 Release:	1
