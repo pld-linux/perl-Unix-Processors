@@ -8,12 +8,12 @@
 Summary:	Unix::Processors - interface to processor (CPU) information
 Summary(pl.UTF-8):	Unix::Processors - interfejs do informacji o procesorze (CPU)
 Name:		perl-Unix-Processors
-Version:	2.033
-Release:	2
+Version:	2.034
+Release:	1
 License:	GPL or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Unix/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	19fc612ef9d206fe4ae758fa6eaba04c
+# Source0-md5:	93cdcbb44efbcf465151b32c6eb8d221
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 Requires:	perl-dirs >= 1.0-7
