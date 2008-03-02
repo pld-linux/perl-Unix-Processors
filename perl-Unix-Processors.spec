@@ -14,6 +14,7 @@ License:	GPL or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Unix/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	93cdcbb44efbcf465151b32c6eb8d221
+URL:		http://search.cpan.org/dist/Unix-Processors/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 Requires:	perl-dirs >= 1.0-7
