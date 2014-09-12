@@ -58,5 +58,4 @@ rm -rf $RPM_BUILD_ROOT
 %{perl_vendorarch}/Unix/Processors
 %dir %{perl_vendorarch}/auto/Unix/Processors
 %attr(755,root,root) %{perl_vendorarch}/auto/Unix/Processors/*.so
-%{perl_vendorarch}/auto/Unix/Processors/*.bs
 %{_mandir}/man3/*
