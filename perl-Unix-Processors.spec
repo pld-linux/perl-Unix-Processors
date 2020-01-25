@@ -2,7 +2,6 @@
 # Conditional build:
 %bcond_without	tests	# do not perform "make test"
 #
-%include	/usr/lib/rpm/macros.perl
 %define		pdir	Unix
 %define		pnam	Processors
 Summary:	Unix::Processors - interface to processor (CPU) information
